@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+main {
+  background-image: url('https://c1.staticflickr.com/5/4062/5169154193_4b8a5a7a80_b.jpg');
+  height: 580px;
+  width: 100vw;
+}
+
+@keyframes walkcycleright {
+  0%   {background-position: -369 -75;}
+100% {background-position:-549 -75;} 
+}
+
+
+@keyframes moveright {
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(1200px);}
+}
+
+#mario {
+  height: 80px;
+  width: 80px; 
+  background-image: url('http://aws.computerstudi.es/~gc800182472/comp2105/week04/static/images/mario.png');
+  position: relative;
+  top: 445px;
+  background-position: -369px -75px;
+}
+    </style>
+    <script>
+      function ani(){  
+    document.getElementById("mario").style.animation = "walkcycleright 0.4s steps(3) infinite, moveright 5s linear infinite";
+      }
+    </script>
+    </head>
+    <body>
+    <main>
+  <div id="mario" onclick="ani()"></div>
+</main>
+    </body>
+</html>
+
